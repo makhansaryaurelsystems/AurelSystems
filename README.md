@@ -1,2 +1,4 @@
-# AurelSystems
-Migrating and Automating Aurel Systems Website
+
+> This is temporary.
+
+Aurel Systems Inc.
