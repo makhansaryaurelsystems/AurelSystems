@@ -1,0 +1,59 @@
+# sourced from https://github.com/makhsry/mak/blob/main/.github/workflows/tasks.yml
+name: Tasks Workflow
+
+on:
+  #push:
+  #  branches:
+  #    - main
+  #  paths:
+  #    - 'assets/md_files/**'
+  #    - 'assets/blog/**'
+  #    - '.github/workflows/**'
+  #    - 'README.md'
+  #    - 'md_to_html_parser.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  Setup:
+    name: Setup Pages 
+    runs-on: ubuntu-latest
+    if: success() #&& false # Disable this job for now
+    steps:
+    
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+      
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: 'new'
+
+  # Job 3: Deploy to GitHub Pages
+  Deploy:
+    name: Deploy to GitHub Pages
+    needs: Setup
+    if: success() #&& false # Disable this job for now
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+      
+      - name: Deployment Summary
+        if: always()
+        run: |
+          echo "### Deployment Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Site deployed to: ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
