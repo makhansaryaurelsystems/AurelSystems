@@ -1,0 +1,266 @@
+<!DOCTYPE html><html
+lang="en-US"><head><meta
+charset="UTF-8"><meta
+name="viewport" content="width=device-width, initial-scale=1"><link
+rel="profile" href="http://gmpg.org/xfn/11"><link
+rel="pingback" href="https://www.aurelsystems.com/xmlrpc.php"><title>CADSIM Plus v3.2 &#8211; Aurel</title><meta
+name="author" content="Aurel Systems" /><meta
+name="copyright" content="Copyright (c) 1997 - 2019 Aurel Systems Inc. All Rights Reserved." /><meta
+name="description" content="New features in CADSIM Plus v3.2" /><meta
+name="keywords" content="cadsim plus,v3.2,new,features,multi-specification,reactant,autotune,efficiency calculations,cyclone" /><link
+rel='dns-prefetch' href='//fonts.googleapis.com' /><link
+rel='dns-prefetch' href='//s.w.org' /><link
+rel="alternate" type="application/rss+xml" title="Aurel &raquo; Feed" href="https://www.aurelsystems.com/feed/" /><link
+rel="alternate" type="application/rss+xml" title="Aurel &raquo; Comments Feed" href="https://www.aurelsystems.com/comments/feed/" /><link
+rel='stylesheet' id='wgs-css'  href='https://www.aurelsystems.com/wp-content/plugins/wp-google-search/wgs.css' type='text/css' media='all' /><link
+rel='stylesheet' id='wgs2-css'  href='https://www.aurelsystems.com/wp-content/plugins/wp-google-search/wgs2.css' type='text/css' media='all' /><link
+rel='stylesheet' id='wp-block-library-css'  href='https://www.aurelsystems.com/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' /><link
+rel='stylesheet' id='wp-lightbox-2.min.css-css'  href='https://www.aurelsystems.com/wp-content/plugins/wp-lightbox-2/styles/lightbox.min.css' type='text/css' media='all' /><link
+rel='stylesheet' id='tesseract-style-css'  href='https://www.aurelsystems.com/wp-content/themes/TESSERACT/style.css' type='text/css' media='all' /><link
+rel='stylesheet' id='tesseract-icons-css'  href='https://www.aurelsystems.com/wp-content/themes/TESSERACT/css/typicons.css' type='text/css' media='all' /><link
+rel='stylesheet' id='fontawesome-css'  href='https://www.aurelsystems.com/wp-content/themes/TESSERACT/css/font-awesome.min.css' type='text/css' media='all' /><link
+rel='stylesheet' id='tesseract-site-banner-css'  href='https://www.aurelsystems.com/wp-content/themes/TESSERACT/css/site-banner.css' type='text/css' media='all' /><style id='tesseract-site-banner-inline-css' type='text/css'>.site-header,
+.main-navigation ul ul a,
+#header-right-menu ul ul a,
+.site-header .cart-content-details{background-color:rgb(170, 187, 221)}.site-header .cart-content-details:after{border-bottom-color:rgb(170, 187, 221)}.home .site-header,
+.home .main-navigation ul ul a,
+.home #header-right ul ul a,
+.home .site-header .cart-content-details{background-color:rgba(170, 187, 221, 1)}.home .site-header .cart-content-details:after{border-bottom-color:rgba(170, 187, 221, 1)}.site-header,
+.site-header h1,
+.site-header h2,
+.site-header h3,
+.site-header h4,
+.site-header h5,
+.site-header
+h6{color:#ffffff!important}#masthead .search-field{color:#fff}#masthead .search-field.watermark{color:#ccc}.site-header a,
+.main-navigation ul ul a,
+#header-right-menu ul ul a,.menu-open,.dashicons.menu-open,.menu-close,.dashicons.menu-close{color:#fff}.site-header a:hover,
+.main-navigation ul ul a:hover,
+#header-right-menu ul ul a:hover,.menu-open:hover,.dashicons.menu-open:hover,.menu-close:hover,.dashicons.menu-open:hover{color:#036}#site-banner .site-logo
+img{height:35px}#masthead{padding-top:15px;padding-bottom:15px}#site-banner-left{width:60%}#site-banner-right{width:40%}#site-banner-left{width:100%}#site-banner-right{display:none;padding:0;margin:0}.icon-shopping-cart, .woocart-header .cart-arrow, .woocart-header .cart-contents{color:#fff}</style><link
+rel='stylesheet' id='tesseract-footer-banner-css'  href='https://www.aurelsystems.com/wp-content/themes/TESSERACT/css/footer-banner.css' type='text/css' media='all' /><style id='tesseract-footer-banner-inline-css' type='text/css'>#colophon{background-color:#fff;color:#000}#colophon .search-field{color:#000}#colophon .search-field.watermark{color:#ccc}#colophon h1,
+#colophon h2,
+#colophon h3,
+#colophon h4,
+#colophon h5,
+#colophon
+h6{color:#000}#colophon
+a{color:#1e73be}#colophon a:hover{color:#036}#horizontal-menu-before,#horizontal-menu-after{border-color:rgba(30,115,190,0.25)}#footer-banner.footbar-active{border-color:rgba(30, 115, 190, 0.15)}#footer-banner .site-logo
+img{height:40px}#colophon{padding-top:10px;padding-bottom:10px}#horizontal-menu-wrap{width:60%}#footer-banner-right{width:40%}</style><link
+rel='stylesheet' id='dashicons-css'  href='https://www.aurelsystems.com/wp-includes/css/dashicons.min.css' type='text/css' media='all' /><link
+rel='stylesheet' id='tesseract-sidr-style-css'  href='https://www.aurelsystems.com/wp-content/themes/TESSERACT/css/jquery.sidr.css' type='text/css' media='all' /><style id='tesseract-sidr-style-inline-css' type='text/css'>.sidr{background-color:#abd}.sidr .sidr-class-menu-item a,
+.sidr .sidr-class-menu-item
+span{color:#fff}.sidr .sidr-class-menu-item ul li a,
+.sidr .sidr-class-menu-item ul li
+span{color:rgba(255, 15, , 0.8)}.sidr .sidr-class-menu-item a:hover,
+.sidr .sidr-class-menu-item span:hover,
+.sidr .sidr-class-menu-item:first-child a:hover,
+.sidr .sidr-class-menu-item:first-child span:hover{color:#fff}.sidr .sidr-class-menu-item ul li a:hover,
+.sidr .sidr-class-menu-item ul li span:hover,
+.sidr .sidr-class-menu-item ul li:first-child a:hover,
+.sidr .sidr-class-menu-item ul li:first-child span:hover{color:rgba(255, 15, , 0.8)}.sidr ul li > a:hover,
+.sidr ul li > span:hover,
+.sidr > div > ul > li:first-child > a:hover,
+.sidr > div > ul > li:first-child > span:hover,
+.sidr ul li ul li:hover > a,
+.sidr ul li ul li:hover>span{background:rgba(0, 0, 0, 0.2)}.sidr ul li > a,
+.sidr ul li>span,#sidr-id-header-button-container-inner>*{-webkit-box-shadow:inset 0 -1px rgba( 0 ,0 ,0 , 0.2);-moz-box-shadow:inset 0 -1px rgba( 0 ,0 ,0 , 0.2);box-shadow:inset 0 -1px rgba( 0,0,0,0.2)}.sidr>div>ul>li:last-of-type>a,.sidr>div>ul>li:last-of-type>span,#sidr-id-header-button-container-inner>*:last-of-type{box-shadow:none}.sidr ul.sidr-class-hr-social li a,
+.sidr ul.sidr-class-hr-social li a:first-child{-webkit-box-shadow:0 1px 0 0px rgba( 0 ,0 ,0, .25);-moz-box-shadow:0 1px 0 0px rgba( 0 ,0 ,0, .25);box-shadow:0 1px 0 0px rgba( 0 ,0 ,0, .25)}.sidr-class-search-field,
+.sidr-class-search-form input[type='search']{background:rgba(255, 255, 255, 0.15);color: }.sidr-class-hr-social{background:rgba(255,255,255,0.15)}#sidr-id-header-button-container-inner,#sidr-id-header-button-container-inner>h1,#sidr-id-header-button-container-inner>h2,#sidr-id-header-button-container-inner>h3,#sidr-id-header-button-container-inner>h4,#sidr-id-header-button-container-inner>h5,#sidr-id-header-button-container-inner>h6{background:rgba(0, 0, 0, 0.2);color: }#sidr-id-header-button-container-inner a,
+#sidr-id-header-button-container-inner
+button{color: }#sidr-id-header-button-container-inner a:hover,
+#sidr-id-header-button-container-inner button:hover{color: }</style><link
+rel='stylesheet' id='tablepress-default-css'  href='https://www.aurelsystems.com/wp-content/tablepress-combined.min.css' type='text/css' media='all' /><link
+rel='stylesheet' id='tesseract-remove-branding-frontend-css'  href='https://www.aurelsystems.com/wp-content/plugins/tesseract-remove-branding-master/assets/css/tesseract-remove-branding-frontend.css' type='text/css' media='all' /><link
+rel='stylesheet' id='fl-builder-google-fonts-5004ad70eb9277b7ec88e3ce694bc83f-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A400%2C300%2C300italic%2C400italic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic&#038;subset=latin%2Cgreek%2Cgreek-ext%2Cvietnamese%2Ccyrillic-ext%2Ccyrillic%2Clatin-ext&#038;ver=5.2.2' type='text/css' media='all' /> <script type='text/javascript' src='https://www.aurelsystems.com/wp-includes/js/jquery/jquery.js'></script> <script type='text/javascript' src='https://www.aurelsystems.com/wp-includes/js/jquery/jquery-migrate.min.js'></script> <script type='text/javascript' src='https://www.aurelsystems.com/wp-content/themes/TESSERACT/js/modernizr.custom.min.js'></script> <script type='text/javascript'>var tesseract_vars={"hpad":"15","fpad":"10"};</script> <script type='text/javascript' src='https://www.aurelsystems.com/wp-content/themes/TESSERACT/js/helpers.js'></script> <link
+rel='https://api.w.org/' href='https://www.aurelsystems.com/wp-json/' /><link
+rel="EditURI" type="application/rsd+xml" title="RSD" href="https://www.aurelsystems.com/xmlrpc.php?rsd" /><link
+rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://www.aurelsystems.com/wp-includes/wlwmanifest.xml" /><link
+rel='prev' title='CADSIM Plus v3.1' href='https://www.aurelsystems.com/version_history/new-in-v3-1/' /><link
+rel='next' title='CADSIM Plus v3.3' href='https://www.aurelsystems.com/version_history/new-in-v3-3/' /><meta
+name="generator" content="WordPress 5.2.2" /><link
+rel="canonical" href="https://www.aurelsystems.com/version_history/new-in-v3-2/" /><link
+rel='shortlink' href='https://www.aurelsystems.com/?p=2727' /><link
+rel="alternate" type="application/json+oembed" href="https://www.aurelsystems.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.aurelsystems.com%2Fversion_history%2Fnew-in-v3-2%2F" /><link
+rel="alternate" type="text/xml+oembed" href="https://www.aurelsystems.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.aurelsystems.com%2Fversion_history%2Fnew-in-v3-2%2F&#038;format=xml" />
+<noscript><style>#sidebar-footer
+aside{border:none!important}</style></noscript><style type="text/css" id="custom-background-css">body.custom-background{background-color:#fff}</style><style id="tt-easy-google-font-styles" type="text/css">p{}h1{}h2{}h3{}h4{}h5{}h6{}a:hover{color:#036}blockquote{color:#6a90dd;font-size:20px}body{color:#000;font-family:'Arial';font-style:normal;font-weight:400}input[type="button"]{text-transform:none}h1,h2,h3,h4{color:#003366!important;padding-left:1px!important}li.current-menu-item
+a{color:#036}a{color:#6a90dd}p{line-height:1.5;padding-bottom:15px;padding-left:20px}ul,ol{line-height:1.5;margin-left:5px}</style><!--[if gte IE 9]><style type="text/css">.gradient{filter:none}</style><![endif]--></head><body
+class="version_history-template-default single single-version_history postid-2727 custom-background frontend"> <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');ga('create','UA-22622213-1','auto');ga('send','pageview');</script> <div
+id="page" class="hfeed site"><a
+class="skip-link screen-reader-text" href="#content">Skip to content</a>
+<header
+id="masthead" class="site-header pos-relative menusize-autowidth no-header-image" role="banner"><div
+id="site-banner" class="cf nothing logo"><div
+id="site-banner-main" class="no-right"><div
+id="mobile-menu-trigger-wrap" class="cf"><a
+class="menu-open dashicons dashicons-menu" href="#" id="mobile-menu-trigger"></a></div><div
+id="site-banner-left"><div
+id="site-banner-left-inner"><div
+class="site-branding "><h1 class="site-logo"><a
+href="https://www.aurelsystems.com/" rel="home"><img
+src="https://www.aurelsystems.com/wp-content/uploads/2016/10/AurelMdBlueBackground_2.png" alt="logo" /></a></h1></div>
+<nav
+id="site-navigation" class="showit main-navigation top-navigation autowidth" role="navigation"><ul
+id="menu-main" class="nav-menu"><li
+id="menu-item-1640" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1640"><a
+href="https://www.aurelsystems.com/about-2/">About</a></li><li
+id="menu-item-1637" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1637"><a
+href="https://www.aurelsystems.com/products-2/">Products</a></li><li
+id="menu-item-239" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-239"><a
+href="https://www.aurelsystems.com/services/">Services</a></li><li
+id="menu-item-237" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-237"><a
+href="https://www.aurelsystems.com/industries/">Industries</a></li><li
+id="menu-item-240" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-240"><a
+href="https://www.aurelsystems.com/support-2/">Support</a></li><li
+id="menu-item-241" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-241"><a
+href="https://www.aurelsystems.com/contact/">Contact</a></li></ul>                                </nav></div></div><div
+id="site-banner-right" class="banner-right nothing"></div></div></div></header><div
+id="content" class="cf site-content"><div
+id="primary" class="content-area">
+<main
+id="main" class="site-main" role="main">
+<article
+id="post-2727" class="post-2727 version_history type-version_history status-publish hentry content_type-new-feature"><header
+class="entry-header"><h1 class="entry-title">CADSIM Plus v3.2</h1>		</header><div
+class="entry-content"><div
+class="entry-meta">
+<span
+class="posted-on">Posted by <span
+class="author vcard"><a
+class="url fn n" href="https://www.aurelsystems.com/author/aureladmin/">aureladmin</a></span> on <a
+href="https://www.aurelsystems.com/version_history/new-in-v3-2/" rel="bookmark"><time
+class="entry-date published updated" datetime="2019-07-31T22:15:55+00:00">31-Jul-19</time></a></span></div><p>Aurel Systems is pleased to announce that&nbsp;<strong>CADSIM Plus v3.2</strong>, our premier chemical process simulation tool, is now available. Upgrades from previous versions of CADSIM Plus are now available for purchase. Contact Aurel for more information.</p><p><a
+href="https://www.aurelsystems.com/cadsim-plus/">CADSIM Plus</a>&nbsp;is a third-generation process modeling tool which features an advanced drawing and modeling interface. CADSIM Plus combines the power of CAD drawing with the ease-of-use of today&#8217;s technical diagramming tools.</p><p><a
+href="https://www.aurelsystems.com/newsletters/CADSIM_Plus_Brochure.pdf">CADSIM Plus brochure</a>&nbsp;(PDF)</p><h3>Drawing Mode</h3><ul><li><strong>Editing of multi-specifications</strong>&nbsp;has been improved to allow selecting of both the&nbsp;free and specified variables (like single specifications) after they have been placed</li><li>Performance has been improved for repeated&nbsp;<strong>browsing</strong>&nbsp;of complex&nbsp;<strong>OPC</strong>&nbsp;connection trees.&nbsp;CADSIM Plus will now remember the previously opened tree and not rebuild it every&nbsp;time.</li><li>Users are now required to make a valid&nbsp;<strong>Limiting Reactant</strong>&nbsp;selection before leaving&nbsp;the reactions wizard.</li><li>The&nbsp;<strong>text entry dialog box</strong>&nbsp;now features improved options when entering one or more&nbsp;lines of text, including the selection of color, layer, angle and text</li><li>New&nbsp;<strong>Ungroup Part</strong>&nbsp;feature allows you to remove the unique part name and un-group all&nbsp;of the elements in a drawing part that has been previously inserted into a drawing.</li><li>The&nbsp;<strong>right-click drawing menu</strong>&nbsp;has been simplified and reorganized so that items are&nbsp;easier to find.</li><li>A new tool allows you to open a&nbsp;<strong>Stream Definition</strong>&nbsp;(even if it is on an invisible&nbsp;layer) by selecting a process line and then right-clicking and selected&nbsp;<strong>Edit Stream&nbsp;Definition</strong>. Or, select&nbsp;<strong>Simulation &gt; Edit Stream Definition</strong>&nbsp;to access a list of all&nbsp;process stream definitions in the drawing, and pick a process to edit. This menu&nbsp;item also provides a list of processes that are not yet used.</li><li>An improved&nbsp;<strong>Remove Line tool</strong>&nbsp;(formerly called&nbsp;<strong>Remove Polygon Sides</strong>) has been improved&nbsp;to remove a&nbsp;<strong>selected line segment</strong>&nbsp;from either a selected&nbsp;<strong>polygon</strong>&nbsp;or a selected&nbsp;<strong>process&nbsp;lines</strong>&nbsp;while maintaining the continuity of the remaining lines. In other words, it&nbsp;allows you remove a line without breaking connections (process lines) or deleting&nbsp;an entire polygon (requiring you to redraw it).</li><li>A new&nbsp;<strong>Align Selection</strong>&nbsp;tool allows you to select a&nbsp;<strong>one or more drawing objects</strong>, select one handle, and then select a new snap location. All of the selected drawing objects would then be&nbsp;<strong>moved relative to the chosen location</strong>&nbsp;on the snap/grid. This tool can be used to help clean up imported drawings that were not drawn on a snap or grid.</li><li>A new&nbsp;<strong>specification&nbsp;</strong>resize<strong>&nbsp;tool</strong>&nbsp;that allows you to quickly resize selected specification icons by selecting&nbsp;<strong>preset sizes from a right-click drop-down menu list</strong>. In the special&nbsp;case where you may wish to hide specifications (and only show their specification lines) you can use this tool to make the icons &#8216;tiny&#8217; or &#8216;minuscule&#8217; (or restore them to larger sizes) by selecting their specification line.</li></ul><h3>Simulation Mode</h3><ul><li>There are new options for customizing the format of the&nbsp;<strong>elapsed time display</strong>.</li><li>A new feature allows you to temporarily&nbsp;<strong>hide or restore</strong>&nbsp;all of the currently open&nbsp;<strong>charts</strong>&nbsp;for a particular drawing, without actually closing them or minimizing them&nbsp;individually.</li><li>A new&nbsp;<strong>manual mode</strong>&nbsp;has been added to&nbsp;<strong>AutoTune</strong>, which allows you to continue to set&nbsp;tuning parameters manually if the first step process identification fails. This allows&nbsp;you to go ahead and finish the tuning process without having to run the drawing until&nbsp;conditions permit AutoTune to proceed. However, you must make all of the selections&nbsp;manually.</li><li><strong>Change Order of Execution</strong>&nbsp;has an improved, simplified on-screen connection display,&nbsp;that selectively shows connecting lines for only the previous and next units, relative&nbsp;to the selected unit.</li><li>The&nbsp;<strong>Convergence Monitor</strong>&nbsp;has been improved to allow an optional global setting change&nbsp;to all drawings in a project at runtime, eliminating the need to visit each drawing&nbsp;individually.</li><li>The option to&nbsp;<strong>select a text color</strong>&nbsp;has been added to the&nbsp;<strong>Insert Results Record</strong>&nbsp;function.</li></ul><h3>Stream Chemistry</h3><ul><li>The ability to handle&nbsp;<strong>bound IONs</strong>&nbsp;has been added. These will work with new and old&nbsp;style reactions. Bound IONs can be attached to follow a mass component, such as FIBER.</li></ul><h3>Unit Modules</h3><ul><li><strong>Efficiency calculations</strong>&nbsp;have been add to the&nbsp;<strong>Recovery Furnace</strong>&nbsp;and&nbsp;<strong>Burner</strong>&nbsp;units.</li><li>A new (optional)&nbsp;<strong>dilution stream</strong>&nbsp;has been added to the following units:&nbsp;<strong>High Density,&nbsp;Tower, DStage, EOP, EStage</strong>&nbsp;and&nbsp;<strong>O2delig</strong>&nbsp;storage units.</li><li>New&nbsp;<strong>Digester</strong>&nbsp;unit added to the optional&nbsp;<strong>Fiber</strong>&nbsp;library.</li><li>New&nbsp;<strong>Cyclone</strong>&nbsp;unit for optional&nbsp;<strong>Mineral</strong>&nbsp;library.</li></ul></div></article>
+</main></div><div
+id="secondary" class="widget-area " role="complementary">
+<aside
+id="search-3" class="widget widget_search"><div
+class="search-wrapper"><form
+role="search" method="get" class="search-form" action="https://www.aurelsystems.com/">
+<label>
+<span
+class="screen-reader-text">Search for:</span>
+<input
+type="search" class="search-field placeholdit" value="" name="s" title="Search for:" />
+</label>
+<input
+type="submit" class="search-submit" value="Search" /></form></div></aside><aside
+id="nav_menu-2" class="widget widget_nav_menu"><h4 class="widget-title">About</h4></aside><aside
+id="nav_menu-3" class="widget widget_nav_menu"><h4 class="widget-title">Products</h4></aside><aside
+id="nav_menu-4" class="widget widget_nav_menu"><h4 class="widget-title">Tech Corner</h4><div
+class="menu-techcorner-container"><ul
+id="menu-techcorner" class="menu"><li
+id="menu-item-2761" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2761"><a
+href="https://www.aurelsystems.com/split-range-controllers/">Split Range Controllers</a></li><li
+id="menu-item-2765" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2765"><a
+href="https://www.aurelsystems.com/pipe-friction/">Pipe Friction</a></li><li
+id="menu-item-2766" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2766"><a
+href="https://www.aurelsystems.com/link-cadsim-plus/">Link CADSIM Plus</a></li><li
+id="menu-item-2764" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2764"><a
+href="https://www.aurelsystems.com/export-drawing-to-pdf/">Export Drawing to PDF</a></li><li
+id="menu-item-2763" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2763"><a
+href="https://www.aurelsystems.com/creating-computer-based-manuals/">Creating Computer-based Manuals</a></li><li
+id="menu-item-2767" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2767"><a
+href="https://www.aurelsystems.com/using-autotune/">Using Autotune</a></li><li
+id="menu-item-2768" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2768"><a
+href="https://www.aurelsystems.com/compound-editor/">Using the Compound Editor</a></li><li
+id="menu-item-2769" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2769"><a
+href="https://www.aurelsystems.com/multi-doc-interface/">Using the Multi-doc Interface</a></li></ul></div></aside><aside
+id="nav_menu-5" class="widget widget_nav_menu"><h4 class="widget-title">Services</h4></aside><aside
+id="nav_menu-6" class="widget widget_nav_menu"><h4 class="widget-title">Online Applications</h4><div
+class="menu-onlineapplications-container"><ul
+id="menu-onlineapplications" class="menu"><li
+id="menu-item-2777" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2777"><a
+href="https://www.aurelsystems.com/data-reconciliation/">Data Reconciliation</a></li><li
+id="menu-item-2776" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2776"><a
+href="https://www.aurelsystems.com/product-tracking/">Product and Energy Tracking</a></li><li
+id="menu-item-2846" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2846"><a
+href="https://www.aurelsystems.com/process-optimization/">Process Optimization</a></li></ul></div></aside><aside
+id="nav_menu-7" class="widget widget_nav_menu"><h4 class="widget-title">Industries</h4></aside><aside
+id="nav_menu-8" class="widget widget_nav_menu"><h4 class="widget-title">CADSIM Plus</h4><div
+class="menu-cadsimplusmenu-container"><ul
+id="menu-cadsimplusmenu" class="menu"><li
+id="menu-item-2834" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2834"><a
+href="https://www.aurelsystems.com/module-libraries/">Standard Module Library</a></li><li
+id="menu-item-2833" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2833"><a
+href="https://www.aurelsystems.com/optional-module-libraries/">Add-on Module Libraries</a></li><li
+id="menu-item-2832" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2832"><a
+href="https://www.aurelsystems.com/ease-of-use/">Ease of Use</a></li><li
+id="menu-item-2831" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2831"><a
+href="https://www.aurelsystems.com/pre-purchase-faqs/">Pre-purchase FAQs</a></li><li
+id="menu-item-2830" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2830"><a
+href="https://www.aurelsystems.com/sample-screenshots/">Sample Screenshots</a></li></ul></div></aside><aside
+id="nav_menu-9" class="widget widget_nav_menu"><h4 class="widget-title">Support</h4><div
+class="menu-supportmenu-container"><ul
+id="menu-supportmenu" class="menu"><li
+id="menu-item-2791" class="menu-item menu-item-type-taxonomy menu-item-object-content_type menu-item-2791"><a
+href="https://www.aurelsystems.com/content_type/update-report/">Version History</a></li><li
+id="menu-item-2790" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2790"><a
+href="https://www.gotomeeting.com/meeting/join-meeting">Join GoToMeeting</a></li></ul></div></aside><aside
+id="nav_menu-10" class="widget widget_nav_menu"><h4 class="widget-title">Previous Versions</h4><div
+class="menu-previousversions-container"><ul
+id="menu-previousversions" class="menu"><li
+id="menu-item-2880" class="menu-item menu-item-type-post_type menu-item-object-version_history menu-item-2880"><a
+href="https://www.aurelsystems.com/version_history/new-in-v3-3/">New in v3.3</a></li><li
+id="menu-item-2881" class="menu-item menu-item-type-post_type menu-item-object-version_history current-menu-item menu-item-2881"><a
+href="https://www.aurelsystems.com/version_history/new-in-v3-2/" aria-current="page">New in v3.2</a></li><li
+id="menu-item-2882" class="menu-item menu-item-type-post_type menu-item-object-version_history menu-item-2882"><a
+href="https://www.aurelsystems.com/version_history/new-in-v3-1/">New in v3.1</a></li><li
+id="menu-item-2883" class="menu-item menu-item-type-post_type menu-item-object-version_history menu-item-2883"><a
+href="https://www.aurelsystems.com/version_history/new-in-v3-0/">New in v3.0</a></li><li
+id="menu-item-2884" class="menu-item menu-item-type-post_type menu-item-object-version_history menu-item-2884"><a
+href="https://www.aurelsystems.com/version_history/new-in-v2-7/">New in v2.7</a></li><li
+id="menu-item-2885" class="menu-item menu-item-type-post_type menu-item-object-version_history menu-item-2885"><a
+href="https://www.aurelsystems.com/version_history/new-in-v2-6/">New in v2.6</a></li><li
+id="menu-item-2886" class="menu-item menu-item-type-post_type menu-item-object-version_history menu-item-2886"><a
+href="https://www.aurelsystems.com/version_history/new-in-v2-5/">New in v2.5</a></li><li
+id="menu-item-2887" class="menu-item menu-item-type-post_type menu-item-object-version_history menu-item-2887"><a
+href="https://www.aurelsystems.com/version_history/new-in-v2-4/">New in v2.4</a></li></ul></div></aside><aside
+id="nav_menu-11" class="widget widget_nav_menu"><h4 class="widget-title">Technical Info</h4><div
+class="menu-advancedtechnology-container"><ul
+id="menu-advancedtechnology" class="menu"><li
+id="menu-item-2839" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2839"><a
+href="https://www.aurelsystems.com/stream-based-specifications/">Stream-based Equations</a></li><li
+id="menu-item-2838" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2838"><a
+href="https://www.aurelsystems.com/living-drawings/">Living Drawings</a></li><li
+id="menu-item-2837" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2837"><a
+href="https://www.aurelsystems.com/open-architecture/">Open Architecture</a></li><li
+id="menu-item-2836" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2836"><a
+href="https://www.aurelsystems.com/smartcalc/">SmartCalc</a></li><li
+id="menu-item-2835" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-2835"><a
+href="https://www.aurelsystems.com/model-scoping/">Model Scoping</a></li></ul></div></aside></div></div><footer
+id="colophon" class="site-footer" role="contentinfo"><div
+id="footer-banner" class="cf menu-is-additional mother-content-notset mother-defbtn-isset footer-autowidth"><div
+id="horizontal-menu-wrap" class="is-additional is-before"><div
+id="horizontal-menu-before" class="switch thm-left-left"><ul
+class="hm-social"><li><a
+title="Follow Us on LinkedIn" href="https://www.linkedin.com/groups/4336849/profile" target="_blank"><img
+src="https://www.aurelsystems.com/wp-content/uploads/2016/10/LinkedInLogo.png" width="24" height="24" alt="LinkedIn icon" /></a></li><li><a
+title="Follow Us on Google Plus" href="https://plus.google.com/112787646309351873263" target="_blank"><img
+src="https://www.aurelsystems.com/wp-content/uploads/2016/10/GooglePlusIcon.png" width="24" height="24" alt="Google Plus icon" /></a></li></ul></div>
+<section
+id="footer-horizontal-menu" class="cf is-before"><ul
+id="menu-footer" class="nav-menu"><li
+id="menu-item-1719" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1719"><a
+href="https://www.aurelsystems.com/about-2/">About</a></li><li
+id="menu-item-1720" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1720"><a
+href="https://www.aurelsystems.com/products-2/">Products</a></li><li
+id="menu-item-948" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-948"><a
+href="https://www.aurelsystems.com/services/">Services</a></li><li
+id="menu-item-1111" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1111"><a
+href="https://www.aurelsystems.com/industries/">Industries</a></li><li
+id="menu-item-949" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-949"><a
+href="https://www.aurelsystems.com/support-2/">Support</a></li><li
+id="menu-item-521" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-521"><a
+href="https://www.aurelsystems.com/contact/">Contact</a></li><li
+id="menu-item-2601" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-2601"><a
+href="https://www.aurelsystems.com/site-search/">Search</a></li></ul></section></div><div
+id="footer-banner-right" class="banner-right content-html"><div
+id="footer-button-container"><div
+id="footer-button-container-inner">© 2019 Aurel Systems Inc.</div></div></div></div></footer></div> <script type='text/javascript'>var scriptParams={"google_search_engine_id":"001267883352223227680:fxq1zwcgzow"};</script> <script type='text/javascript' src='https://www.aurelsystems.com/wp-content/plugins/wp-google-search/assets/js/google_cse_v2.js'></script> <script type='text/javascript'>var JQLBSettings={"fitToScreen":"0","resizeSpeed":"100","displayDownloadLink":"0","navbarOnTop":"0","loopImages":"","resizeCenter":"","marginSize":"0","linkTarget":"","help":"","prevLinkTitle":"previous image","nextLinkTitle":"next image","prevLinkText":"\u00ab Previous","nextLinkText":"Next \u00bb","closeTitle":"close image gallery","image":"Image ","of":" of ","download":"Download","jqlb_overlay_opacity":"50","jqlb_overlay_color":"#000000","jqlb_overlay_close":"1","jqlb_border_width":"10","jqlb_border_color":"#ffffff","jqlb_border_radius":"0","jqlb_image_info_background_transparency":"100","jqlb_image_info_bg_color":"#ffffff","jqlb_image_info_text_color":"#000000","jqlb_image_info_text_fontsize":"10","jqlb_show_text_for_image":"1","jqlb_next_image_title":"next image","jqlb_previous_image_title":"previous image","jqlb_next_button_image":"https:\/\/www.aurelsystems.com\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/next.gif","jqlb_previous_button_image":"https:\/\/www.aurelsystems.com\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/prev.gif","jqlb_maximum_width":"","jqlb_maximum_height":"","jqlb_show_close_button":"1","jqlb_close_image_title":"close image gallery","jqlb_close_image_max_heght":"22","jqlb_image_for_close_lightbox":"https:\/\/www.aurelsystems.com\/wp-content\/plugins\/wp-lightbox-2\/styles\/images\/closelabel.gif","jqlb_keyboard_navigation":"1","jqlb_popup_size_fix":"0"};</script> <script type='text/javascript' src='https://www.aurelsystems.com/wp-content/plugins/wp-lightbox-2/wp-lightbox-2.min.js'></script> <script type='text/javascript' src='https://www.aurelsystems.com/wp-content/themes/TESSERACT/js/jquery.fittext.js'></script> <script type='text/javascript' src='https://www.aurelsystems.com/wp-content/themes/TESSERACT/js/jquery.sidr.min.js'></script> <script type='text/javascript' src='https://www.aurelsystems.com/wp-content/themes/TESSERACT/js/helpers-functions.js'></script> <script type='text/javascript' src='https://www.aurelsystems.com/wp-content/themes/TESSERACT/js/helpers.js'></script> <script type='text/javascript' src='https://www.aurelsystems.com/wp-content/themes/TESSERACT/js/skip-link-focus-fix.js'></script> <script type='text/javascript' src='https://www.aurelsystems.com/wp-includes/js/wp-embed.min.js'></script> </body></html>
+<!--
+*** This site runs WP Super Minify plugin v1.5.1 - http://wordpress.org/plugins/wp-super-minify ***
+*** Total size saved: 9.841% | Size before compression: 36339 bytes | Size after compression: 32763 bytes. ***
+-->

@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /support/*.zip
+Disallow: /support/*.exe
+Disallow: /support/Paulo/
+Disallow: /support/CTS/
+
