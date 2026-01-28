@@ -1,0 +1,148 @@
+/* Base Styles - Common to all themes */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    padding: 20px;
+    transition: background 0.3s ease;
+}
+
+.posts-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Base structure for all cards */
+.post-card {
+    overflow: hidden;
+}
+
+.post-thumbnail {
+    object-fit: cover;
+}
+
+.post-content {
+    min-width: 0; /* Allows text to wrap properly in flex containers */
+}
+
+.post-excerpt,
+.post-full {
+    word-wrap: break-word;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .post-card {
+        flex-direction: column !important;
+    }
+    
+    .post-thumbnail {
+        width: 100% !important;
+        height: 200px !important;
+    }
+    
+    body {
+        padding: 10px;
+    }
+}
+
+/* Classic Paper Card Style */
+
+body {
+    background: #f5f5f5;
+}
+
+.post-card {
+    background: #fefefe;
+    padding: 24px;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+    border: 1px solid #ddd;
+    display: flex;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15), 0 3px 6px rgba(0,0,0,0.1);
+}
+
+.post-thumbnail {
+    width: 120px;
+    height: 120px;
+    border: 3px solid #ddd;
+    background: #f9f9f9;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 12px;
+}
+
+.post-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-header {
+    margin-bottom: 12px;
+}
+
+.post-title {
+    font-family: Georgia, serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 8px;
+}
+
+.post-meta {
+    font-size: 13px;
+    color: #666;
+}
+
+.post-excerpt {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.post-full {
+    display: none;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.post-full.expanded {
+    display: block;
+}
+
+.read-more {
+    align-self: flex-start;
+    background: none;
+    border: none;
+    color: #2c3e50;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    opacity: 0.7;
+}
+
