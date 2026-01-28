@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Team Card Style Switcher</title>
+  <link rel="stylesheet" href="base.css">
+  <link id="themeStylesheet" rel="stylesheet" href="classic-corporate.css">
+</head>
+
+<body>
+
+  <h1>Team – Style Preview</h1>
+
+  <div class="controls">
+    <button onclick="setStyle('classic-corporate.css')">classic-corporate</button>
+    <button onclick="setStyle('dark-mode.css')">dark-mode</button>
+    <button onclick="setStyle('flat-minimal.css')">flat-minimal</button>
+    <button onclick="setStyle('modern-glass.css')">modern-glass</button>
+    <button onclick="setStyle('modern-shadow.css')">modern-shadow</button>
+    <button onclick="setStyle('role-highlight.css')">role-highlight</button>
+    <button onclick="setStyle('timeline.css')">timeline</button>
+    <button onclick="setStyle('hover-reveal.css')">hover-reveal</button>
+    <button onclick="setStyle('compact.css')">compact</button>
+    <button onclick="setStyle('executive.css')">executive</button>
+  </div>
+
+  <div class="team-grid">
+    <!-- Member 1 -->
+    <div class="team-card">
+      <div class="avatar"><img src="assets/user1.jpg"></div>
+      <div>
+        <h3>Milad Asgarpour Khansary</h3>
+        <p class="role">Simulation Module Development Lead</p>
+        <p>Process Engineering, Simulation, AI, ML, Data Science</p>
+        <p>Since: 2026</p>
+        <div class="links">
+          <img src="assets/linkedin.svg">
+          <img src="assets/github.svg">
+          <img src="assets/website.svg">
+          <img src="assets/email.svg">
+        </div>
+      </div>
+    </div>
+
+    <!-- Member 2 -->
+    <div class="team-card">
+      <div class="avatar"><img src="assets/user2.jpg"></div>
+      <div>
+        <h3>XXXXX XXXXX</h3>
+        <p class="role">AI Systems Engineer</p>
+        <p>Deep Learning, Computer Vision, MLOps</p>
+        <p>Since: 2024</p>
+        <div class="links">
+          <img src="assets/linkedin.svg">
+          <img src="assets/github.svg">
+          <img src="assets/website.svg">
+          <img src="assets/email.svg">
+        </div>
+      </div>
+    </div>
+
+    <!-- Member 3 -->
+    <div class="team-card">
+      <div class="avatar"><img src="assets/user3.jpg"></div>
+      <div>
+        <h3>XXXXX XXXXXX</h3>
+        <p class="role">Process Simulation Specialist</p>
+        <p>Chemical Engineering, Aspen, Optimization</p>
+        <p>Since: 2022</p>
+        <div class="links">
+          <img src="assets/linkedin.svg">
+          <img src="assets/github.svg">
+          <img src="assets/website.svg">
+          <img src="assets/email.svg">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function setStyle(file) {
+      document.getElementById("themeStylesheet").href = file;
+    }
+  </script>
+
+</body>
+
+</html>

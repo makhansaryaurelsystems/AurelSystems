@@ -1,0 +1,87 @@
+/* Magazine Editorial Style */
+
+body {
+    background: #fafafa;
+}
+
+.post-card {
+    background: white;
+    padding: 25px;
+    border-radius: 0;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    display: flex;
+    gap: 20px;
+    transition: all 0.3s ease;
+}
+
+.post-thumbnail {
+    width: 140px;
+    height: 180px;
+    flex-shrink: 0;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #999;
+    font-size: 12px;
+}
+
+.post-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-header {
+    margin-bottom: 12px;
+}
+
+.post-title {
+    font-family: Georgia, serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.post-meta {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 11px;
+    color: #666;
+}
+
+.post-excerpt {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.post-full {
+    display: none;
+    color: #555;
+    line-height: 1.6;
+    margin-top: 15px;
+}
+
+.post-full.expanded {
+    display: block;
+}
+
+.read-more {
+    align-self: flex-start;
+    background: none;
+    border: none;
+    color: #0066cc;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    padding: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    opacity: 0.7;
+}

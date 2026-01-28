@@ -1,0 +1,44 @@
+
+:root {
+  --font: Arial, sans-serif;
+  --gap: 16px;
+  --radius: 8px;
+}
+
+body {
+  font-family: var(--font);
+  background: #f4f6f8;
+  padding: 32px;
+}
+
+h1 { margin-bottom: 16px; }
+
+.controls button {
+  margin-right: 8px;
+  margin-bottom: 12px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 20px;
+}
+
+.team-card {
+  display: flex;
+  gap: var(--gap);
+  padding: 20px;
+  transition: all .3s ease;
+}
+
+.avatar img {
+  width: 90px;
+  border-radius: 6px;
+}
+
+.links img {
+  width: 22px;
+  margin-right: 8px;
+}
