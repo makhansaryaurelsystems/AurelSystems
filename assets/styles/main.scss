@@ -1,0 +1,679 @@
+/* =========================================
+   SCSS MASTER STYLESHEET
+   ========================================= */
+
+/* --- 1. VARIABLES & RESET --- */
+:root {
+    --primary-color: #003366;
+    --primary-light: #2c5282;
+    --accent-color: #00a8e8;
+    --text-dark: #1a202c;
+    --text-light: #718096;
+    --background-light: #f7fafc;
+    --white: #ffffff;
+    --transition: all 0.3s ease;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: var(--text-dark);
+    line-height: 1.6;
+    background-color: var(--background-light);
+}
+
+/* --- 2. HEADER & NAV --- */
+header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo img {
+    height: 40px;
+    width: auto;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+    color: var(--accent-color);
+}
+
+/* --- 3. PAGE SECTIONS (Hero, Features, Footer) --- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 51, 102, 0.8), rgba(0, 51, 102, 0.6));
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+    padding: 0 5%;
+    margin-top: 60px;
+}
+
+.hero-content {
+    max-width: 900px;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 1s forwards;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero p {
+    font-size: 1.25rem;
+    margin-bottom: 2.5rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background-color: var(--accent-color);
+    color: var(--white);
+    box-shadow: 0 4px 15px rgba(0, 168, 232, 0.4);
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 168, 232, 0.6);
+    background-color: #0093cc;
+}
+
+/* Footer */
+footer {
+    background-color: #0a1120;
+    color: #e2e8f0;
+    padding: 4rem 5% 2rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+}
+
+.footer-col h4 {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--white);
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #718096;
+    font-size: 0.9rem;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   THEMING ENGINE
+   ========================================= */
+
+/* --- ANNOUNCEMENTS THEMES --- */
+/* Expanded to include full list of supplied CSS themes */
+$announcement-themes: (
+    'colorful': (bg: white,
+        border-left: 6px solid #ccc, // nth-child handled in loop logic
+        shadow: 0 4px 12px rgba(0, 0, 0, 0.1),
+        radius: 8px),
+    'minimalist': (bg: white,
+        border: 1px solid #eaeaea,
+        shadow: none,
+        radius: 4px),
+    'glass': (bg: rgba(255, 255, 255, 0.25),
+        border: 1px solid rgba(255, 255, 255, 0.18),
+        backdrop: blur(10px),
+        shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
+        radius: 16px),
+    'paper': (bg: #fdfbf7,
+        border: 1px solid #dcdcdc,
+        shadow: 2px 2px 0 rgba(0, 0, 0, 0.05),
+        radius: 0),
+    'magazine': (bg: white,
+        shadow: 0 2px 12px rgba(0, 0, 0, 0.08),
+        radius: 0,
+        font-title: ('Georgia', serif),
+        read-more-style: 'simple'),
+    'neumorphic': (bg: #e0e5ec,
+        shadow: (9px 9px 16px rgba(163, 177, 198, 0.6), -9px -9px 16px rgba(255, 255, 255, 0.5)),
+        radius: 20px,
+        read-more-style: 'inset-shadow'),
+
+    // -- DARK THEMES --
+    'dark-arctic': (bg: #2c3e50,
+        text: #ecf0f1,
+        accent: #3498db,
+        radius: 4px),
+    'dark-carbon': (bg: #121212,
+        text: #e0e0e0,
+        accent: #333333,
+        border: 1px solid #333),
+    'dark-crimson': (bg: #1a0505,
+        text: #ffcccc,
+        accent: #ff3333,
+        shadow: 0 4px 20px rgba(255, 0, 0, 0.2)),
+    'dark-cyberpunk': (bg: #0d0d0d,
+        text: #e0e0e0,
+        border: 2px solid transparent,
+        radius: 0,
+        special-bg: (linear-gradient(#0d0d0d, #0d0d0d), linear-gradient(135deg, #00ffff 0%, #ff00ff 100%)),
+        shadow: (0 0 30px rgba(0, 255, 255, 0.2), 0 0 60px rgba(255, 0, 255, 0.1))),
+    'dark-matrix': (bg: #001a00,
+        text: #b8ffb8,
+        border: 2px solid #00ff41,
+        shadow: (0 0 20px rgba(0, 255, 65, 0.3), inset 0 0 60px rgba(0, 255, 65, 0.05)),
+        font: ('Courier New', monospace)),
+    'dark-midnight': (bg: linear-gradient(135deg, #1e293b 0%, #0f172a 100%),
+        text: #f8fafc,
+        border: 1px solid #334155,
+        shadow: 0 10px 40px rgba(0, 0, 0, 0.6),
+        radius: 16px,
+        accent: #fbbf24),
+    'dark-neon': (bg: linear-gradient(135deg, #1a1f3a 0%, #0f1329 100%),
+        text: #d1d5db,
+        border: 1px solid rgba(124, 58, 237, 0.3),
+        shadow: 0 8px 32px rgba(0, 0, 0, 0.5),
+        radius: 12px,
+        accent: #7c3aed,
+        special-border: true),
+    'dark-obsidian': (bg: #0a0a0a,
+        text: #e0e0e0,
+        border: 1px solid #1a1a1a,
+        radius: 12px,
+        shadow: (0 12px 48px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.03)),
+        accent: #10b981),
+    'dark-purple': (bg: linear-gradient(135deg, #2b1055 0%, #1a0b2e 100%),
+        text: #e9d5ff,
+        border: 1px solid rgba(236, 72, 153, 0.3),
+        radius: 18px,
+        shadow: (0 10px 40px rgba(0, 0, 0, 0.6), 0 0 60px rgba(147, 51, 234, 0.2)),
+        special-mask: true),
+    'dark-slate': (bg: #2d2d2d,
+        text: #e5e5e5,
+        border-left: 5px solid #14b8a6,
+        radius: 10px,
+        shadow: 0 8px 32px rgba(0, 0, 0, 0.5),
+        accent: #14b8a6)
+);
+
+// Container for posts
+.posts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+// Generate Announcement Theme Classes
+@each $name, $config in $announcement-themes {
+    .theme-announcement-#{$name} {
+
+        .post-card {
+            background: map-get($config, bg);
+            border-radius: if(map-has-key($config, radius), map-get($config, radius), 8px);
+            box-shadow: map-get($config, shadow);
+            display: flex;
+            gap: 20px;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 24px;
+
+            // Background image handling (e.g. for gradients/cyberpunk)
+            @if map-has-key($config, special-bg) {
+                background-image: map-get($config, special-bg);
+                background-origin: border-box;
+                background-clip: padding-box, border-box;
+            }
+
+            // Standard Borders
+            @if map-has-key($config, border) {
+                border: map-get($config, border);
+            }
+
+            @if map-has-key($config, border-left) {
+                border-left: map-get($config, border-left);
+            }
+
+            // Backdrop Filter
+            @if map-has-key($config, backdrop) {
+                backdrop-filter: map-get($config, backdrop);
+            }
+
+            // Fonts
+            @if map-has-key($config, font) {
+                font-family: map-get($config, font);
+            }
+
+            // Special Elements (Masks, Neon borders etc)
+            @if map-has-key($config, special-mask) {
+                &::before {
+                    content: '';
+                    position: absolute;
+                    inset: 0;
+                    border-radius: 18px;
+                    padding: 1px;
+                    background: linear-gradient(135deg, #9333ea 0%, #ec4899 100%);
+                    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+                    -webkit-mask-composite: xor;
+                    mask-composite: exclude;
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                }
+
+                &:hover::before {
+                    opacity: 1;
+                }
+            }
+
+            @if map-has-key($config, special-border) {
+
+                // Neon vertical line
+                &::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 4px;
+                    height: 100%;
+                    background: linear-gradient(180deg, #a78bfa 0%, #7c3aed 100%);
+                    box-shadow: 0 0 15px rgba(124, 58, 237, 0.8);
+                }
+
+                padding-left: 28px; // adjust for line
+            }
+
+            // Text Colors
+            @if map-has-key($config, text) {
+                color: map-get($config, text);
+
+                .post-title {
+                    color: white;
+                }
+
+                // Usually headings are lighter/white in dark themes
+                @if map-has-key($config, font-title) {
+                    font-family: map-get($config, font-title);
+                    color: #333;
+                }
+
+                // Matrix special
+                @if $name =='dark-matrix' {
+                    .post-title {
+                        color: #00ff41;
+                        text-shadow: 0 0 10px rgba(0, 255, 65, 0.6);
+                    }
+
+                    .post-meta {
+                        color: #00cc33;
+                    }
+                }
+            }
+
+            // Read More Button Styling
+            .read-more {
+                margin-top: 15px;
+                align-self: flex-start;
+                padding: 10px 24px;
+                border-radius: 20px;
+                border: none;
+                cursor: pointer;
+                background: #333;
+                color: white;
+
+                @if map-has-key($config, accent) {
+                    background: map-get($config, accent);
+                    color: if($name =='dark-matrix' or $name =='dark-cyberpunk', black, white);
+
+                    // Matrix outlines
+                    @if $name =='dark-matrix' {
+                        background: transparent;
+                        border: 2px solid #00ff41;
+                        color: #00ff41;
+
+                        &:hover {
+                            background: #00ff41;
+                            color: black;
+                        }
+                    }
+                }
+
+                @if map-has-key($config, read-more-style) {
+                    @if map-get($config, read-more-style)=='simple' {
+                        background: none;
+                        color: #0066cc;
+                        padding: 0;
+                    }
+
+                    @if map-get($config, read-more-style)=='inset-shadow' {
+                        background: #e0e5ec;
+                        color: #0066cc;
+                        box-shadow: 4px 4px 8px rgba(163, 177, 198, 0.4), -4px -4px 8px rgba(255, 255, 255, 0.5);
+                    }
+                }
+            }
+        }
+
+        // Colorful specific logic
+        @if $name =='colorful' {
+            .post-card:nth-child(1) {
+                border-left-color: #ff6b6b;
+            }
+
+            .post-card:nth-child(2) {
+                border-left-color: #4ecdc4;
+            }
+
+            .post-card:nth-child(3) {
+                border-left-color: #ffe66d;
+            }
+
+            .post-card:nth-child(4) {
+                border-left-color: #a8e6cf;
+            }
+
+            .post-card:nth-child(5) {
+                border-left-color: #ff8b94;
+            }
+        }
+
+        // Neumorphic specific thumbnail
+        @if $name =='neumorphic' {
+            .post-thumbnail {
+                box-shadow: inset 4px 4px 8px rgba(163, 177, 198, 0.4), inset -4px -4px 8px rgba(255, 255, 255, 0.3);
+                background: #e0e5ec;
+                border-radius: 15px;
+            }
+        }
+    }
+}
+
+/* Common Post Elements */
+.post-thumbnail {
+    width: 110px;
+    height: 110px;
+    border-radius: 8px;
+    background: #e0e0e0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: #888;
+    flex-shrink: 0;
+}
+
+.post-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.post-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.post-meta {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.post-full {
+    display: none;
+    margin-top: 15px;
+}
+
+.post-full.expanded {
+    display: block;
+}
+
+
+/* --- PEOPLE THEMES --- */
+// Expanded to include remaining People styling
+$people-themes: (
+    'classic-corporate': (card-bg: white,
+        border: 1px solid #e2e8f0,
+        shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1)),
+    'executive': (card-bg: linear-gradient(135deg, #002244, #004488),
+        text: white,
+        radius: 12px),
+    'dark-mode': (card-bg: #1a202c,
+        text: #e2e8f0,
+        border: 1px solid #2d3748),
+    'flat-minimal': (card-bg: #f7fafc,
+        border: none,
+        shadow: none),
+    'glassmorphism': (card-bg: rgba(255, 255, 255, 0.25),
+        shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37),
+        backdrop: blur(4px),
+        border: 1px solid rgba(255, 255, 255, 0.18)),
+
+    // New additions
+    'compact': (max-width: 420px,
+        padding: 14px,
+        card-bg: white,
+        shadow: 0 2px 4px rgba(0, 0, 0, 0.05)),
+    'modern-shadow': (card-bg: #fff,
+        radius: 10px,
+        shadow: 0 10px 24px rgba(0, 0, 0, .12)),
+    'timeline': (card-bg: white,
+        border-left: 6px solid #007acc,
+        timeline-style: true),
+    'role-highlight': (card-bg: white,
+        shadow: 0 2px 4px rgba(0, 0, 0, 0.1),
+        highlight-role: true),
+    'hover-reveal': (card-bg: white,
+        reveal-links: true)
+);
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 5%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+@each $name, $config in $people-themes {
+    .theme-people-#{$name} {
+        .team-card {
+            background: map-get($config, card-bg);
+            border: map-get($config, border);
+            box-shadow: map-get($config, shadow);
+            border-radius: if(map-has-key($config, radius), map-get($config, radius), 8px);
+            padding: if(map-has-key($config, padding), map-get($config, padding), 1.5rem);
+            transition: transform 0.3s ease;
+
+            @if map-has-key($config, max-width) {
+                max-width: map-get($config, max-width);
+            }
+
+            @if map-has-key($config, backdrop) {
+                backdrop-filter: map-get($config, backdrop);
+            }
+
+            @if map-has-key($config, text) {
+                color: map-get($config, text);
+
+                h3,
+                p {
+                    color: map-get($config, text);
+                }
+
+                .role {
+                    color: rgba(map-get($config, text), 0.8);
+                }
+            }
+
+            // Timeline special
+            @if map-has-key($config, timeline-style) {
+                position: relative;
+
+                &::before {
+                    content: '';
+                    width: 6px;
+                    background: #007acc;
+                    margin-right: 14px;
+                    display: inline-block;
+                    height: 100%;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+
+                padding-left: 2rem;
+            }
+
+            // Hover Reveal
+            @if map-has-key($config, reveal-links) {
+                .links {
+                    opacity: 0;
+                    transition: opacity 0.3s ease;
+                }
+
+                &:hover .links {
+                    opacity: 1;
+                }
+            }
+
+            // Role Highlight
+            @if map-has-key($config, highlight-role) {
+                .role {
+                    background: #003366;
+                    color: white;
+                    display: inline-block;
+                    padding: 4px 8px;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}
+
+/* Common Team Card Elements */
+.team-card {
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+}
+
+.team-card .avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #cbd5e0;
+    flex-shrink: 0;
+    overflow: hidden;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.team-card .links {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.team-card .links img {
+    width: 20px;
+    height: 20px;
+    filter: grayscale(100%);
+    transition: filter 0.3s;
+    cursor: pointer;
+}
+
+.team-card .links img:hover {
+    filter: none;
+}

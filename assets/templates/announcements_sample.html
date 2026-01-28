@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post Cards - Using Separate CSS Files</title>
+
+    <!-- Base styles - always include -->
+    <link rel="stylesheet" href="style-base.css">
+
+    <!-- Theme styles - include ONE of these -->
+    <!-- <link rel="stylesheet" href="style-minimalist.css"> -->
+    <!-- <link rel="stylesheet" href="style-magazine.css"> -->
+    <!-- <link rel="stylesheet" href="style-neumorphic.css"> -->
+    <link rel="stylesheet" href="style-colorful.css">
+    <!-- <link rel="stylesheet" href="style-paper.css"> -->
+    <!-- <link rel="stylesheet" href="style-glass.css"> -->
+</head>
+
+<body>
+    <div class="posts-container">
+        <div class="post-card">
+            <div class="post-thumbnail">
+                <span>IMAGE</span>
+            </div>
+            <div class="post-content">
+                <div class="post-header">
+                    <h2 class="post-title">The Future of Web Design in 2026</h2>
+                    <div class="post-meta">January 15, 2026 • by Sarah Mitchell</div>
+                </div>
+                <div class="post-excerpt">
+                    Web design continues to evolve at a rapid pace, with new technologies and design patterns emerging
+                    constantly. In this article, we explore the latest trends that are shaping the digital landscape.
+                    From AI-powered interfaces to immersive 3D experiences, designers are pushing boundaries like never
+                    before. The integration of voice commands and gesture controls is becoming standard. Accessibility
+                    remains a top priority as we build more inclusive digital spaces. Performance optimization
+                    techniques have advanced significantly. Dark mode designs have matured beyond simple color
+                    inversions. Micro-interactions add delightful touches to user experiences. The line between web and
+                    native apps continues to blur. Designers must balance innovation with usability...
+                </div>
+                <div class="post-full">
+                    Motion design plays a crucial role in modern interfaces. Typography choices have become more
+                    experimental and bold. Color psychology is being applied with greater sophistication.
+                    Component-based design systems streamline development workflows. Sustainability considerations
+                    influence design decisions. Cross-platform consistency requires careful planning and execution. User
+                    privacy features are integrated seamlessly into interfaces. Personalization algorithms adapt layouts
+                    to individual preferences. Real-time collaboration tools are built directly into design
+                    applications. The future promises even more exciting developments as technology advances.
+                </div>
+                <button class="read-more" onclick="toggleReadMore(this)">Read More</button>
+            </div>
+        </div>
+
+        <div class="post-card">
+            <div class="post-thumbnail">
+                <span>IMAGE</span>
+            </div>
+            <div class="post-content">
+                <div class="post-header">
+                    <h2 class="post-title">Understanding Modern CSS Grid Layouts</h2>
+                    <div class="post-meta">January 12, 2026 • by David Chen</div>
+                </div>
+                <div class="post-excerpt">
+                    CSS Grid has revolutionized how we approach layout design on the web, offering unprecedented control
+                    and flexibility. Developers can create complex responsive designs with minimal code. The
+                    two-dimensional layout system handles both rows and columns simultaneously. Grid template areas
+                    provide intuitive visual layout definitions. Auto-placement algorithms intelligently position items
+                    when not explicitly placed. Subgrids allow nested grids to align with parent grid tracks. Gap
+                    properties create consistent spacing without margin hacks. Named lines make grid positioning more
+                    semantic and maintainable. Fractional units distribute space proportionally across tracks. The
+                    minmax function enables responsive sizing constraints...
+                </div>
+                <div class="post-full">
+                    Grid auto-flow controls how auto-placed items fill the grid. Dense packing optimizes space usage in
+                    masonry-like layouts. Alignment properties provide fine-grained control over item positioning. Grid
+                    works beautifully alongside Flexbox for comprehensive layout solutions. Browser support is now
+                    excellent across all modern browsers. Learning Grid requires a shift in thinking about layout
+                    design. Practical applications range from simple card layouts to complex magazine designs.
+                    Performance is excellent with hardware acceleration. The specification continues evolving with new
+                    features being proposed. Grid represents the present and future of CSS layout design.
+                </div>
+                <button class="read-more" onclick="toggleReadMore(this)">Read More</button>
+            </div>
+        </div>
+
+        <div class="post-card">
+            <div class="post-thumbnail">
+                <span>IMAGE</span>
+            </div>
+            <div class="post-content">
+                <div class="post-header">
+                    <h2 class="post-title">Best Practices for Accessible Design</h2>
+                    <div class="post-meta">January 8, 2026 • by Maria Rodriguez</div>
+                </div>
+                <div class="post-excerpt">
+                    Creating accessible digital experiences is both a moral imperative and a practical necessity in
+                    today's diverse world. Proper semantic HTML forms the foundation of accessible web content. ARIA
+                    attributes enhance accessibility when native HTML falls short. Color contrast ratios must meet WCAG
+                    guidelines for readability. Keyboard navigation enables users who cannot use a mouse. Screen reader
+                    compatibility requires thoughtful markup and testing. Focus indicators help users track their
+                    position on the page. Alternative text describes images for those who cannot see them. Captions and
+                    transcripts make audio content accessible to everyone. Form labels must be properly associated with
+                    their inputs...
+                </div>
+                <div class="post-full">
+                    Skip links allow quick navigation to main content areas. Responsive design ensures usability across
+                    different devices and screen sizes. Touch targets should be large enough for users with motor
+                    impairments. Error messages must be clear, specific, and actionable. Time limits should be
+                    adjustable or eliminable when possible. Animation can be reduced for users with vestibular
+                    disorders. Language attributes help screen readers pronounce content correctly. Accessible design
+                    benefits all users, not just those with disabilities. Regular testing with actual users provides
+                    invaluable feedback. Accessibility is an ongoing commitment, not a one-time checkbox exercise.
+                </div>
+                <button class="read-more" onclick="toggleReadMore(this)">Read More</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleReadMore(button) {
+            const postContent = button.closest('.post-content');
+            const fullContent = postContent.querySelector('.post-full');
+
+            fullContent.classList.toggle('expanded');
+
+            if (fullContent.classList.contains('expanded')) {
+                button.textContent = 'Read Less';
+            } else {
+                button.textContent = 'Read More';
+            }
+        }
+    </script>
+</body>
+
+</html>

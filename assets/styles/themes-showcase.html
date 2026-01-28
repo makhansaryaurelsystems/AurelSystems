@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Showcase</title>
+    <!-- Assuming main.css is compiled in the same directory. If not, please compile main.scss -->
+    <link rel="stylesheet" href="main.css">
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            padding: 20px;
+            padding-top: 100px;
+            /* Space for controls */
+            background-color: #f4f4f5;
+        }
+
+        #controls {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .control-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+        }
+
+        select {
+            padding: 8px 12px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        section {
+            margin-bottom: 60px;
+            border-top: 1px dashed #ccc;
+            padding-top: 40px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #333;
+        }
+
+        /* Local specific styles for demo purposes if strictly needed, 
+           but relying mostly on main.css */
+    </style>
+</head>
+
+<body>
+
+    <div id="controls">
+        <div class="control-group">
+            <label for="announcement-select">Announcement Theme:</label>
+            <select id="announcement-select">
+                <!-- Filled by JS -->
+            </select>
+        </div>
+        <div class="control-group">
+            <label for="people-select">People Theme:</label>
+            <select id="people-select">
+                <!-- Filled by JS -->
+            </select>
+        </div>
+    </div>
+
+    <h1>Style Theme Showcase</h1>
+
+    <!-- ANNOUNCEMENTS SECTION -->
+    <section>
+        <h2 class="section-title">Announcements Posts</h2>
+
+        <!-- The wrapper that receives the theme class -->
+        <div id="announcement-wrapper" class="theme-announcement-colorful">
+            <div class="posts-container">
+
+                <!-- Post 1 -->
+                <div class="post-card">
+                    <div class="post-thumbnail">
+                        <span>NEWS</span>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">Global Summit 2025 Announced</h3>
+                        <div class="post-meta">October 24, 2025 • Press Release</div>
+                        <p>We are thrilled to announce the upcoming Global Innovation Summit. Leaders from around the
+                            world will gather to discuss the future of technology and sustainability.</p>
+                        <button class="read-more">Read Full Story</button>
+                    </div>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="post-card">
+                    <div class="post-thumbnail">
+                        <span>UPDATE</span>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">Q4 Financial Results Exceed Expectations</h3>
+                        <div class="post-meta">January 15, 2026 • Financials</div>
+                        <p>Our quarterly earnings report shows a 15% increase in revenue year-over-year. The dedicated
+                            efforts of our team have paved the way for a prosperous fiscal year.</p>
+                        <button class="read-more">View Report</button>
+                    </div>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="post-card">
+                    <div class="post-thumbnail">
+                        <span>EVENT</span>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">Community Charity Run</h3>
+                        <div class="post-meta">March 05, 2026 • Community</div>
+                        <p>Join us for our annual 5k run to support local shelters. Registration is now open and early
+                            bird tickets are available until the end of the month.</p>
+                        <button class="read-more">Register Now</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PEOPLE SECTION -->
+    <section>
+        <h2 class="section-title">Team / People Cards</h2>
+
+        <!-- The wrapper that receives the theme class -->
+        <div id="people-wrapper" class="theme-people-classic-corporate">
+            <div class="team-grid">
+
+                <!-- Person 1 -->
+                <div class="team-card">
+                    <div class="avatar">
+                        <img src="https://i.pravatar.cc/150?img=68" alt="Sarah Johnson"
+                            style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="info">
+                        <h3>Sarah Johnson</h3>
+                        <div class="role">Chief Technology Officer</div>
+                        <p style="margin-top:0.5rem; font-size:0.9rem; opacity:0.8">Sarah leads our engineering
+                            initiatives and oversees the development of our core platforms.</p>
+                        <div class="links">
+                            <!-- Placeholders for icons -->
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                            <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Person 2 -->
+                <div class="team-card">
+                    <div class="avatar">
+                        <img src="https://i.pravatar.cc/150?img=12" alt="Michael Chen"
+                            style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="info">
+                        <h3>Michael Chen</h3>
+                        <div class="role">Head of Product</div>
+                        <p style="margin-top:0.5rem; font-size:0.9rem; opacity:0.8">Michael is responsible for product
+                            strategy and ensuring our solutions meet customer needs.</p>
+                        <div class="links">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                            <img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Person 3 -->
+                <div class="team-card">
+                    <div class="avatar">
+                        <img src="https://i.pravatar.cc/150?img=44" alt="Elena Rodriguez"
+                            style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="info">
+                        <h3>Elena Rodriguez</h3>
+                        <div class="role">Lead Designer</div>
+                        <p style="margin-top:0.5rem; font-size:0.9rem; opacity:0.8">Elena brings creative vision to
+                            life, crafting intuitive and beautiful user experiences.</p>
+                        <div class="links">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174881.png" alt="Dribbble">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // List of themes extracted from main.scss
+        const announcementThemes = [
+            'colorful', 'minimalist', 'glass', 'paper', 'magazine', 'neumorphic',
+            'dark-arctic', 'dark-carbon', 'dark-crimson', 'dark-cyberpunk',
+            'dark-matrix', 'dark-midnight', 'dark-neon', 'dark-obsidian',
+            'dark-purple', 'dark-slate'
+        ];
+
+        const peopleThemes = [
+            'classic-corporate', 'executive', 'dark-mode', 'flat-minimal',
+            'glassmorphism', 'compact', 'modern-shadow', 'timeline',
+            'role-highlight', 'hover-reveal'
+        ];
+
+        // Populate Dropdowns
+        const annSelect = document.getElementById('announcement-select');
+        const peopleSelect = document.getElementById('people-select');
+        const annWrapper = document.getElementById('announcement-wrapper');
+        const peopleWrapper = document.getElementById('people-wrapper');
+
+        announcementThemes.forEach(theme => {
+            const opt = document.createElement('option');
+            opt.value = theme;
+            opt.textContent = theme.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+            annSelect.appendChild(opt);
+        });
+
+        peopleThemes.forEach(theme => {
+            const opt = document.createElement('option');
+            opt.value = theme;
+            opt.textContent = theme.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join(' ');
+            peopleSelect.appendChild(opt);
+        });
+
+        // Event Listeners
+        annSelect.addEventListener('change', (e) => {
+            const selected = e.target.value;
+            // Remove any existing theme class
+            announcementThemes.forEach(t => {
+                annWrapper.classList.remove('theme-announcement-' + t);
+            });
+            // Add new theme class
+            annWrapper.classList.add('theme-announcement-' + selected);
+        });
+
+        peopleSelect.addEventListener('change', (e) => {
+            const selected = e.target.value;
+            // Remove any existing theme class
+            peopleThemes.forEach(t => {
+                peopleWrapper.classList.remove('theme-people-' + t);
+            });
+            // Add new theme class
+            peopleWrapper.classList.add('theme-people-' + selected);
+        });
+
+        // Initialize with first match (optional, HTML hardcoded to first one already)
+        annSelect.value = announcementThemes[0];
+        peopleSelect.value = peopleThemes[0];
+
+    </script>
+</body>
+
+</html>

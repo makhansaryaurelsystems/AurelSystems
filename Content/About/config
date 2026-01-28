@@ -1,2 +1,4 @@
-base: base
-cards: NONE
+# css field empty = use commons, otherwise use what is specified.
+# 
+css=
+js=
