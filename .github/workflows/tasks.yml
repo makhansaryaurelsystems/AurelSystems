@@ -1,5 +1,4 @@
-name: Tasks Workflow
-
+name: Update website
 on:
   #push:
   #  branches:
@@ -22,23 +21,67 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  set:
-    name: Build HTML files
+  # Prepare HTML files
+  prepare:
+    name: Prepare HTML files
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.12'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install markdown
+      
+      - name: Run parser
+        run: |
+          python generate_html.py
+      
+      - name: Prepare Summary
+        if: always()
+        run: |
+          echo "### Prepare Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          if [ -f "live/index.html" ]; then
+            echo "HTML files generated successfully" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "HTML generation failed" >> $GITHUB_STEP_SUMMARY
+          fi
+
+  # Point to /live/
+  setup:
+    name: Point to /live/
+    needs: prepare
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
     
-      - name: Setup Pages
+      - name: Setup GitHub Pages
         uses: actions/configure-pages@v4
       
-      - name: Upload artifact
+      - name: Upload artifact to /live/
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'new'
+          path: 'live' 
+      
+      - name: Setup Summary
+        if: always()
+        run: |
+          echo "### Setup Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Site setup to: ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
+
+  # Deploy to GitHub Pages
   deploy:
     name: Deploy to GitHub Pages
-    needs: set
+    needs: setup
     runs-on: ubuntu-latest
     environment:
       name: github-pages
@@ -47,3 +90,10 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+      - name: Deployment Summary
+        if: always()
+        run: |
+          echo "### Deployment Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "Site deployed to: ${{ steps.deployment.outputs.page_url }}" >> $GITHUB_STEP_SUMMARY
