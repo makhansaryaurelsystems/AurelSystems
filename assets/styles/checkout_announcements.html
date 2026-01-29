@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Announcement Theme Tester</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            padding: 40px;
+            padding-top: 100px;
+            background-color: #f4f4f5;
+        }
+        #controls {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        select {
+            padding: 8px 12px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="controls">
+        <label for="theme-select"><strong>Select Theme:</strong></label>
+        <select id="theme-select">
+            <option value="colorful">Colorful</option>
+<option value="minimalist">Minimalist</option>
+<option value="glass">Glass</option>
+<option value="paper">Paper</option>
+<option value="magazine">Magazine</option>
+<option value="neumorphic">Neumorphic</option>
+<option value="dark-arctic">Dark Arctic</option>
+<option value="dark-carbon">Dark Carbon</option>
+<option value="dark-crimson">Dark Crimson</option>
+<option value="dark-cyberpunk">Dark Cyberpunk</option>
+<option value="dark-matrix">Dark Matrix</option>
+<option value="dark-midnight">Dark Midnight</option>
+<option value="dark-neon">Dark Neon</option>
+<option value="dark-obsidian">Dark Obsidian</option>
+<option value="dark-purple">Dark Purple</option>
+<option value="dark-slate">Dark Slate</option>
+
+        </select>
+    </div>
+
+    <div class="container">
+        <div id="wrapper" class="theme-announcement-colorful">
+            <div class="posts-container">
+                
+                <div class="post-card">
+                    <div class="post-thumbnail">
+                        <span>TEST</span>
+                    </div>
+                    <div class="post-content">
+                        <h3 class="post-title">Theme Test Article</h3>
+                        <div class="post-meta">Generated from text2test.txt</div>
+                        
+                        <div class="post-excerpt">
+                            <p>Universities and other post-secondary educational institutions often have a mix of interests for the use of Aurel's process simulation software tools. These interests include using our CADSIM Plus software as an instructional aid to teach students basic chemical engineering concepts such as heat and material balances, or to teach the fundamentals of process control, or to facilitate class design projects, or to assist graduate students with advanced tools for research.</p>
+                        </div>
+                        
+                        <div class="post-text">
+                            <p>Universities and other post-secondary educational institutions often have a mix of interests for the use of Aurel's process simulation software tools. These interests include using our CADSIM Plus software as an instructional aid to teach students basic chemical engineering concepts such as heat and material balances, or to teach the fundamentals of process control, or to facilitate class design projects, or to assist graduate students with advanced tools for research.</p>
+<p>However, it is becoming more common for universities to also participate in commercialized research and development, as well as providing compensated services for commercial industries. With this in mind, Aurel has developed an Academic Software Program that allows for both purposes without infringing on our Academic End User License Agreement. The typical program provides one purchased commercial license of our software for non-academic uses, plus 10 donated licenses for pure research and classroom learning.</p>
+<p>Some of the interesting research that has been done using CADSIM Plus includes:</p>
+<p>Students and professors at the University of Quebec and Trois Rivieres participated in a number of research projects using CADSIM Plus, including the development of optimization methods using a Neural Network module that they developed.</p>
+<p>San Juan College used CADSIM Plus to develop a web-based virtual lab that provided a competency-based experiential virtual laboratory exercises for distance learning.</p>
+<p>Students at the University of British Columbian have used CADSIM Plus for research in a number of fields, including development of zinc electrowinning models and the modeling of Kraft pulp air emissions of non-condensable gases.</p>
+<p>A graduate student at the University of Toronto used CADSIM Plus to create a lime kiln simulation.</p>
+<p>A student at the University of Calgary researched methods of data reconciliation that included process dynamics.</p>
+<p>Students at Ecole Polytechnique de Montreal used CADSIM Plus as part of two large, funded research projects, to model the bio-refining of ethanol and other useful chemicals from plant waste in pulp and paper mills.</p>
+<p>FPInnovations (formerly PAPRICAN) used CADSIM Plus extensively to research new process technologies and techniques for Canadian pulp and paper producers.</p>
+<p>The Goulburn Ovens Institute of TAFE in Australia has used CADSIM Plus in their research to improve a number of areas of dairy and milk product processing, including design, control, operation and training.</p>
+<p>You will see many more universities and research institutions listed in our client list.</p>
+                        </div>
+                        
+                        <button class="read-more">Read Full Story</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const themeSelect = document.getElementById('theme-select');
+        const wrapper = document.getElementById('wrapper');
+        const themes = ['colorful', 'minimalist', 'glass', 'paper', 'magazine', 'neumorphic', 'dark-arctic', 'dark-carbon', 'dark-crimson', 'dark-cyberpunk', 'dark-matrix', 'dark-midnight', 'dark-neon', 'dark-obsidian', 'dark-purple', 'dark-slate'];
+
+        themeSelect.addEventListener('change', (e) => {
+            const selected = e.target.value;
+            // Remove all known theme classes
+            themes.forEach(t => wrapper.classList.remove('theme-announcement-' + t));
+            // Add selected
+            wrapper.classList.add('theme-announcement-' + selected);
+        });
+
+        // Read More Toggle Logic
+        document.querySelectorAll('.read-more').forEach(button => {
+            button.addEventListener('click', function() {
+                const card = this.closest('.post-card');
+                card.classList.toggle('expanded');
+                
+                if (card.classList.contains('expanded')) {
+                    this.textContent = 'Read Less';
+                } else {
+                    this.textContent = 'Read Full Story';
+                }
+            });
+        });
+    </script>
+</body>
+</html>

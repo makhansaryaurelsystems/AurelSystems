@@ -505,15 +505,26 @@ $announcement-themes: (
     margin-bottom: 1rem;
 }
 
-.post-full {
+/* Content Visibility Logic */
+.post-text {
     display: none;
     margin-top: 15px;
 }
 
-.post-full.expanded {
+.post-excerpt {
     display: block;
 }
 
+/* When parent card is expanded, swap visibility */
+.post-card.expanded {
+    .post-text {
+        display: block;
+    }
+
+    .post-excerpt {
+        display: none;
+    }
+}
 
 /* --- PEOPLE THEMES --- */
 // Expanded to include remaining People styling

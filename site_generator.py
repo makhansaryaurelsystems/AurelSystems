@@ -94,7 +94,7 @@ def parse_config(dir_path):
 def generate_html_pages(nav_items):
     """Walks through content directory and generates HTML pages."""
     
-    # 1. We treat top-level folders as "Tabs" -> "Page.html"
+    # We treat top-level folders as "Tabs" -> "Page.html"
     for item in nav_items:
         section_path = os.path.join(CONTENT_DIR, item)
         output_filename = f"{item}.html"
@@ -111,8 +111,6 @@ def generate_html_pages(nav_items):
         if 'cards' in config: # e.g. cards: executive
             # Map simplified config names to our SCSS theme classes
             # Announcements use 'theme-announcement-X', People use 'theme-people-X'
-            # Heuristic: If section is 'People' or 'Contact' (often people), use people theme?
-            # Or just try to match both?
             # Let's map generically:
             theme_val = config['cards']
             if theme_val.lower() != 'none':

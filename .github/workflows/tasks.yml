@@ -39,6 +39,10 @@ jobs:
           python -m pip install --upgrade pip
           pip install markdown
       
+      - name: Compile .scss to .css
+        run: |
+          npx node-sass --include-path assets/styles assets/styles/main.scss assets/styles/main.css
+      
       - name: Run parser
         run: |
           python generate_html.py

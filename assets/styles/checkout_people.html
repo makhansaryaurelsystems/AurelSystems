@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People Theme Tester</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            padding: 40px;
+            padding-top: 100px;
+            background-color: #f4f4f5;
+        }
+        #controls {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            z-index: 1000;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+        }
+        select {
+            padding: 8px 12px;
+            font-size: 16px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="controls">
+        <label for="theme-select"><strong>Select Theme:</strong></label>
+        <select id="theme-select">
+            <option value="classic-corporate">Classic Corporate</option>
+<option value="executive">Executive</option>
+<option value="dark-mode">Dark Mode</option>
+<option value="flat-minimal">Flat Minimal</option>
+<option value="glassmorphism">Glassmorphism</option>
+<option value="compact">Compact</option>
+<option value="modern-shadow">Modern Shadow</option>
+<option value="timeline">Timeline</option>
+<option value="role-highlight">Role Highlight</option>
+<option value="hover-reveal">Hover Reveal</option>
+
+        </select>
+    </div>
+
+    <div class="container">
+        <div id="wrapper" class="theme-people-classic-corporate">
+            <div class="team-grid">
+                
+                <div class="team-card">
+                    <div class="avatar">
+                        <img src="https://i.pravatar.cc/150?img=68" alt="Sarah Johnson" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="info">
+                        <h3>Sarah Johnson</h3>
+                        <div class="role">Chief Technology Officer</div>
+                        <p style="margin-top:0.5rem; font-size:0.9rem; opacity:0.8">Sarah leads our engineering initiatives and oversees the development of our core platforms.</p>
+                        <div class="links">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" title="LinkedIn"><img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" title="GitHub">
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="team-card">
+                    <div class="avatar">
+                        <img src="https://i.pravatar.cc/150?img=12" alt="Michael Chen" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="info">
+                        <h3>Michael Chen</h3>
+                        <div class="role">Head of Product</div>
+                        <p style="margin-top:0.5rem; font-size:0.9rem; opacity:0.8">Michael is responsible for product strategy and ensuring our solutions meet customer needs.</p>
+                        <div class="links">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" title="LinkedIn"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" alt="Twitter" title="Twitter">
+                        </div>
+                    </div>
+                </div>
+        
+                <div class="team-card">
+                    <div class="avatar">
+                        <img src="https://i.pravatar.cc/150?img=44" alt="Elena Rodriguez" style="width:100%;height:100%;object-fit:cover;">
+                    </div>
+                    <div class="info">
+                        <h3>Elena Rodriguez</h3>
+                        <div class="role">Lead Designer</div>
+                        <p style="margin-top:0.5rem; font-size:0.9rem; opacity:0.8">Elena brings creative vision to life, crafting intuitive and beautiful user experiences.</p>
+                        <div class="links">
+                            <img src="https://cdn-icons-png.flaticon.com/512/174/174881.png" alt="Dribbble" title="Dribbble">
+                        </div>
+                    </div>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const themeSelect = document.getElementById('theme-select');
+        const wrapper = document.getElementById('wrapper');
+        const themes = ['classic-corporate', 'executive', 'dark-mode', 'flat-minimal', 'glassmorphism', 'compact', 'modern-shadow', 'timeline', 'role-highlight', 'hover-reveal'];
+
+        themeSelect.addEventListener('change', (e) => {
+            const selected = e.target.value;
+            // Remove all known theme classes
+            themes.forEach(t => wrapper.classList.remove('theme-people-' + t));
+            // Add selected
+            wrapper.classList.add('theme-people-' + selected);
+        });
+    </script>
+</body>
+</html>

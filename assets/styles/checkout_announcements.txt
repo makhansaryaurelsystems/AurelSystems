@@ -1,0 +1,15 @@
+Universities and other post-secondary educational institutions often have a mix of interests for the use of Aurel's process simulation software tools. These interests include using our CADSIM Plus software as an instructional aid to teach students basic chemical engineering concepts such as heat and material balances, or to teach the fundamentals of process control, or to facilitate class design projects, or to assist graduate students with advanced tools for research.
+
+However, it is becoming more common for universities to also participate in commercialized research and development, as well as providing compensated services for commercial industries. With this in mind, Aurel has developed an Academic Software Program that allows for both purposes without infringing on our Academic End User License Agreement. The typical program provides one purchased commercial license of our software for non-academic uses, plus 10 donated licenses for pure research and classroom learning.
+
+Some of the interesting research that has been done using CADSIM Plus includes:
+
+Students and professors at the University of Quebec and Trois Rivieres participated in a number of research projects using CADSIM Plus, including the development of optimization methods using a Neural Network module that they developed.
+San Juan College used CADSIM Plus to develop a web-based virtual lab that provided a competency-based experiential virtual laboratory exercises for distance learning.
+Students at the University of British Columbian have used CADSIM Plus for research in a number of fields, including development of zinc electrowinning models and the modeling of Kraft pulp air emissions of non-condensable gases.
+A graduate student at the University of Toronto used CADSIM Plus to create a lime kiln simulation.
+A student at the University of Calgary researched methods of data reconciliation that included process dynamics.
+Students at Ecole Polytechnique de Montreal used CADSIM Plus as part of two large, funded research projects, to model the bio-refining of ethanol and other useful chemicals from plant waste in pulp and paper mills.
+FPInnovations (formerly PAPRICAN) used CADSIM Plus extensively to research new process technologies and techniques for Canadian pulp and paper producers.
+The Goulburn Ovens Institute of TAFE in Australia has used CADSIM Plus in their research to improve a number of areas of dairy and milk product processing, including design, control, operation and training.
+You will see many more universities and research institutions listed in our client list.
