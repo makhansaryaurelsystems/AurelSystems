@@ -281,10 +281,10 @@ $announcement-themes: (
 
 // Container for posts
 .posts-container {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    max-width: 900px;
+    max-width: 1400px;
     margin: 40px auto;
     padding: 0 20px;
 }
